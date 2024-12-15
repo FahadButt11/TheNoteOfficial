@@ -1,44 +1,47 @@
-<<<<<<< HEAD
-import { getPosts } from './api/fakeApi';
-import './App.css';
-import {useEffect, useState} from "react";
-import Card from './components/card';
-
-
-function App() {
-
-  const [data, setData]=useState(null);
-  
-  useEffect(()=> {
-     getPosts().then(posts=>{setData(posts);
-     });
-
-  },[]);
-
-  return(
-    <div>
-      {data? data.map( (e)=> <Card title={e.title} body={e.body}/> ) : <p>no data</p> }
-    </div>
-  )
-=======
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Header from '../components/Header'
-import PerfumesForMen from "../components/Content"
-import ProductGrid from "../components/Product"
-import Footer from '../components/Footer'
+import {Routes, Route} from 'react-router-dom'
+import Home from './pages/Home';
+import Navbar from './components/Navbar';
+import Contact from './pages/Contact';
+import About from './pages/About';
+import Collection from './pages/Collection';
+import Product from './pages/Product';
+import Cart from './pages/Cart';
+import Login from './pages/Login';
+import PlaceOrder from './pages/PlaceOrder';
+import Orders from './pages/Orders';
+import Footer from './components/Footer';
+import Copyright from './components/Copyright';
 
 function App() {
+  // className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]
   return(
-<div>
-<Header/>
+<div >
+
+<Navbar/>
+<Routes>
+  <Route path='/' element={<Home/>} />
+    <Route path='/collection' element={<Collection />} />
+  <Route path='/about' element={<About />} />
+  <Route path='/contact' element={<Contact />} />
+  <Route path='/product/:productId' element={<Product />} />
+  <Route path='/cart' element={<Cart />} />
+  <Route path='/login' element={<Login />} />
+  <Route path='/place-order' element={<PlaceOrder />} />
+  <Route path='/orders' element={<Orders />} /> 
+
+
+</Routes>
+<Footer/>
+<Copyright/>
+
+
+{/* <Navbar /> */}
+{/* <Header/>
 <PerfumesForMen/>
 < ProductGrid/>
-<Footer/>
+<Footer/> */}
 </div>
   );
->>>>>>> 944b1b7600424bc6d1f117a2446591b4fb21e7d3
-}
 
+}
 export default App;
