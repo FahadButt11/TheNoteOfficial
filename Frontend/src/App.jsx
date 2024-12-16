@@ -11,6 +11,8 @@ import PlaceOrder from './pages/PlaceOrder';
 import Orders from './pages/Orders';
 import Footer from './components/Footer';
 import Copyright from './components/Copyright';
+import DeliveryOrders from './pages/DeliveryOrders';
+import ExchangeReturns from './pages/ExchangeReturns';
 
 function App() {
   // className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]
@@ -28,6 +30,8 @@ function App() {
   <Route path='/login' element={<Login />} />
   <Route path='/place-order' element={<PlaceOrder />} />
   <Route path='/orders' element={<Orders />} /> 
+  <Route path='/delivery-orders' element={<DeliveryOrders/>}/>
+  <Route path='/exchange-returns' element={<ExchangeReturns/>}/>
 
 
 </Routes>
