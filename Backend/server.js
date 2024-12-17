@@ -1,6 +1,9 @@
 const express=require("express");
 let server= express();
 
+server.use(express.json());
+server.use("")
+
 
 server.get("/",(req,res)=>{
     res.send("Hello World");

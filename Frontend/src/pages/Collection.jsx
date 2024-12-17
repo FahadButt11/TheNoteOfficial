@@ -1,9 +1,10 @@
 import React from 'react'
+import ProductGrid from '../components/ProductGrid'
 
 function Collection() {
   return (
     <div>
-      <h1>hello collection</h1>
+      <ProductGrid/>
     </div>
   )
 }
