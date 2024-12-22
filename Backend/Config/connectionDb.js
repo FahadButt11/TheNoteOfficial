@@ -1,20 +1,16 @@
 const mongoose= require("mongoose");
+const env=require('dotenv');
+env.config();
 
 
 const connectDB = async () => {
-  try {
-    await mongoose.connect(
-      "mongodb+srv://cluster0.mongodb.net/",
-      {
-        dbName: "TheNoteOfficial",
-        user: "fahadbutt",
-        pass: ".24eNjRMkYg94MN"
-      }
-    );
-    console.log("MongoDB connected successfully!");
-  } catch (error) {
-    console.error("Error connecting to MongoDB:", error.message);
-  }
+
+   mongoose.connect(process.env.CONN_STRING, {
+    dbName: process.env.DB_NAME,
+    pass:process.env.PASSWORD,
+    user:process.env.USER_NAME
+}).then(() => console.log('MongoDB connected'))
+.catch(err => console.log(err));
 };
 module.exports = connectDB;
 

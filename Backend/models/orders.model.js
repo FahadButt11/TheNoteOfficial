@@ -1,27 +1,53 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const orderSchema = new mongoose.Schema({
-  user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
-  items: [
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User', // Link to User Schema
+  },
+  products: [
     {
-      productId: { type: mongoose.Schema.Types.ObjectId, ref: "Product", required: true },
-      quantity: { type: Number, required: true },
+      product: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Product',
+        required: true, // Link to Product Schema
+      },
+      quantity: { type: Number, required: true, min: 1 },
     },
   ],
-  totalAmount: { type: Number, required: true },
-  paymentMethod: { 
-    type: String, 
-    enum: ["COD", "Bank Deposit"], 
-    required: true 
+  shippingAddress: {
+    country: { type: String, required: true },
+    firstName: { type: String, required: true },
+    lastName: { type: String, required: true },
+    address: { type: String, required: true },
+    apartment: { type: String, default: '' }, // Optional field
+    city: { type: String, required: true },
+    postalCode: { type: String, default: '' }, // Optional field
+    phone: { type: String, required: true },
   },
-  status: { 
-    type: String, 
-    enum: ["pending", "completed", "cancelled"], 
-    default: "pending" 
+  contact: {
+    emailOrPhone: { type: String, required: true }, // Email or phone entered at checkout
+    subscribeToNews: { type: Boolean, default: false }, // Checkbox for news subscription
+  },
+  shippingMethod: {
+    type: String,
+    enum: ['Standard Shipping', 'Express Shipping', 'Same Day Delivery'],
+    required: true,
+    default: 'Standard Shipping', // Default shipping option
+  },
+  paymentMethod: {
+    type: String,
+    enum: ['Credit Card', 'PayPal', 'Cash on Delivery', 'Bank Transfer'],
+    required: true,
+  },
+  totalAmount: { type: Number, required: true }, // Total price of the order
+  status: {
+    type: String,
+    enum: ['Pending', 'Processing', 'Shipped', 'Delivered', 'Cancelled'],
+    default: 'Pending',
   },
   createdAt: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model("Order", orderSchema);
-
-  
+const Order = mongoose.model('Order', orderSchema);
+module.exports = Order;
