@@ -4,11 +4,17 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const session = require('express-session');
 const ConnectionDb=require('./Config/connectionDb')
+const path= require('path')
+const Cors= require('cors');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+
 // Middleware
 app.use(express.json());
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use(express.urlencoded({extended:true} ));
+app.use(Cors());
 
 
 

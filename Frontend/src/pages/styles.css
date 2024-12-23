@@ -60,7 +60,7 @@
 
 .hero button:hover, .banner-2 button:hover {
     background-color: #ffffff;
-    transform: translateY(-7px);
+    transform: translateY(-4px);
     color: black;
 }
 

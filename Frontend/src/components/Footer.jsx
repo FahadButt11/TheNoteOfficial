@@ -101,7 +101,7 @@ const Footer = () => {
       {/* WhatsApp Floating Button */}
       <div className="fixed bottom-6 right-6">
       <a href="https://wa.link/jzg6q6">
-    <div className="relative right-2 group w-[4rem] h-[4rem] rounded-full bg-[#25D366] shadow-lg flex justify-center items-center overflow-hidden hover:scale-125 transition-transform duration-500 ease-in-out">
+    <div className="relative right-2 group w-[4rem] h-[4rem] rounded-full bg-[#25D366] shadow-lg flex justify-center items-center overflow-hidden hover:-translate-y-3 transition-transform duration-500 ease-in-out">
       <div className="absolute inset-0 rounded-full bg-transparent border-2 border-white scale-0  transition-transform duration-700 ease-in-out"></div>
       
       <MessageCircle color="white" className="text-xl transition-colors duration-300" />

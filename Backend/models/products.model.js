@@ -24,12 +24,6 @@ const productSchema = new mongoose.Schema({
     ref: 'Category', // Link to Category Schema
     required: true,
   },
-  reviews: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Review', // Link to Review Schema
-    },
-  ],
   createdAt: { type: Date, default: Date.now },
 });
 
