@@ -99,7 +99,7 @@ const ContactUs = () => {
           {/* Submit Button */}
           <div className="text-left">
             <button
-              type="submit"
+              type="submit "
               className="w-[20%] bg-black text-white font-bold text-xs px-10 py-4 hover:bg-white hover:text-black hover:border hover:border-black hover:-translate-y-1 transition duration-300"
             >
               SUBMIT CONTACT

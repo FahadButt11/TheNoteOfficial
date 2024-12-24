@@ -7,7 +7,8 @@ import CollectionHero from '../components/CollectionHero';
 const Men = () => {
   return (
     <div>
-        <CollectionHero image={Assets.mainimage} />
+
+        <CollectionHero image={Assets.mainimage} text="Perfume For Men" />
         <PerfumesForMen/>
         <MenCollection/>
       

@@ -17,9 +17,10 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/:collection', async(req,res) => {
+//find by category
+router.get('/:id', async(req,res) => {
     try {
-        const products= await Product.find({category:req.params.collection});
+        const products= await Product.find({category:req.params.id});
         res.status(200).json(products)
         
     } catch (error) {

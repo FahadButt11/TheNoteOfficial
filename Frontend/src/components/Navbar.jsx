@@ -2,14 +2,15 @@ import React , {useState} from "react";
 import { NavLink } from "react-router-dom";
 import {Search, ShoppingCart, User} from 'lucide-react';
 import { useSidebar } from '../context/SidebarContext';
-import { useCart } from "../context/CartContext";
+// import { useCart } from "../context/CartContext";
+import { useGlobalState } from "../context/GlobalStateContext";
 
 
 
 const Navbar = () => {
   const { isSidebarOpen, toggleSidebar } = useSidebar();
   const [isOpen, setIsOpen] = useState(false);
-  const { cartCount } = useCart();
+  const { cartCount } = useGlobalState();
   
   const toggleDropdown = () => {
     setIsOpen(!isOpen) };

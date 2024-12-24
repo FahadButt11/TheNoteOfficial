@@ -1,5 +1,5 @@
 import React from "react";
-import Assets from "../assets/Assets.js"
+// import Assets from "../assets/Assets.js"
 import {NavLink} from "react-router-dom";
 
 const CollectionCard = ({image, title, description, productsCount, buttonText, link }) => {

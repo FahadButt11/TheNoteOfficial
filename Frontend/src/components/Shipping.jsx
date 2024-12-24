@@ -34,24 +34,14 @@ const Shipping = () => {
             <input
               type="radio"
               name="shipping"
-              value="Standard"
-              checked={selectedMethod === "Standard"}
-              onChange={() => setSelectedMethod("Standard")}
+              value="Standard Shipping"
+              checked={selectedMethod === "Standard Shipping"}
+              onChange={() => setSelectedMethod("Standard Shipping")}
               className="mr-2"
             />
             <label>Standard - Free</label>
           </div>
-          <div className="flex items-center mt-3">
-            <input
-              type="radio"
-              name="shipping"
-              value="Express"
-              checked={selectedMethod === "Express"}
-              onChange={() => setSelectedMethod("Express")}
-              className="mr-2"
-            />
-            <label>Express - $10</label>
-          </div>
+          
         </div>
 
         <button

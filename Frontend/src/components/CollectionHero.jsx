@@ -1,7 +1,7 @@
 import React from 'react'
 import Assets from '../assets/Assets';
 
-const CollectionHero = ({image}) => {
+const CollectionHero = ({image , text}) => {
   return (
     <div>
       <div className="ml-4 p-8 w-full ">
@@ -9,7 +9,7 @@ const CollectionHero = ({image}) => {
           <a  href="/" className="hover:text-black text-[16px]">
             Home
           </a>{" "}
-          &gt; <span className='text-[16px]'>Perfumes For men</span>
+          &gt; <span className='text-[16px]'>{text}</span>
         </nav>
 
       </div>

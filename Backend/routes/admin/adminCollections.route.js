@@ -1,3 +1,5 @@
+// TESTED SUCCESSFULLY
+
 const express = require('express');
 const router = express.Router();
 const Collection = require('../../models/collections.model'); // Adjust path as per your project structure

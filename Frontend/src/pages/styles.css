@@ -214,6 +214,7 @@
 
 
 .breathe-luxury {
+    overflow: hidden;
     margin-top: 0;
     display: flex;
     justify-content: space-between; 
@@ -225,14 +226,13 @@
 .breathe-luxury .our-story img {
     max-width: 100%; 
     height: auto;
+    object-fit: cover;
     border-radius: 10px; 
     transition: 1s ease;
 }
 
 .breathe-luxury .our-story img:hover {
-    max-width: 105%; 
-    height: auto;
-    border-radius: 10px; 
+    scale: 105%;
 }
 
 .breathe-luxury .text {

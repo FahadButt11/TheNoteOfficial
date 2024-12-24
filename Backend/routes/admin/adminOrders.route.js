@@ -9,7 +9,7 @@ router.get('/orders', async (req,res )=> {
     try {
 
         let orders = await Orders.find();
-        res.status(200).json(ordes);
+        res.status(200).json(orders);
 
         
     } catch (err) {

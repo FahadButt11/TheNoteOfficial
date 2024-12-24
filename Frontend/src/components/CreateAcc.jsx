@@ -63,7 +63,7 @@ const CreateAccount = () => {
           </div>
           <button
             type="submit"
-            className="w-[80%] bg-black text-white py-3 border-2 border-black transform transition duration-800 hover:-translate-y-1  hover:bg-white hover:text-black transition"
+            className="w-[80%] bg-black text-white py-3 border-2 border-black transition transform  duration-800 hover:-translate-y-1  hover:bg-white hover:text-black"
           >
             CREATE AN ACCOUNT
           </button>

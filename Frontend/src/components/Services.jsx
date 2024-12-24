@@ -7,21 +7,21 @@ const Services = () => (
     <h3>OUR SERVICES</h3>
     <div className="icons">
       <div className="icon">
-        <img src={assets.call} alt="Customer Service" />
+        <img className='ml-24 mb-5' src={assets.call} alt="Customer Service" />
         <p>CUSTOMER SERVICE</p>
         <p>For any question, contact info@thenoteofficial.com</p>
       </div>
       <div className="icon">
-        <img src={assets.van} alt="Delivery" />
+        <img className='ml-4 mb-3' src={assets.van} alt="Delivery" />
         <p>Free Complimentary Delivery</p>
       </div>
       <div className="icon">
-        <img src={assets.spray} alt="Complimentary Samples" />
+        <img className='ml-6 mb-5' src={assets.spray} alt="Complimentary Samples" />
         <p>COMPLIMENTARY SAMPLES</p>
       </div>
       <div className="icon">
-        <img src={assets.shield} alt="Secure Payment" />
-        <p>SECURE PAYMENT</p>
+        <img className='mr-6 mb-3' src={assets.shield} alt="Secure Payment" />
+        <p className='mr-10 '> SECURE PAYMENT</p>
       </div>
     </div>
   </div>

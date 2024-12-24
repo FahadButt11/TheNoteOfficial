@@ -1,3 +1,5 @@
+//TESTED SUCCESSFULLY!
+
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const User = require('../models/users.model');
@@ -29,11 +31,9 @@ router.post('/login', async (req, res) => {
     let pass=userLogin.password;
     try {
         const user = await User.findOne({ email });
-        console.log("find user");
         if (!user) return res.status(404).json({ message: 'User not found' });
 
         const isMatch = await bcrypt.compare(pass, user.password);
-        console.log("compare password");
         if (!isMatch) return res.status(401).json({ message: 'Invalid credentials' });
 
         // req.session.user = user;
